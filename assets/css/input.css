@@ -1,0 +1,70 @@
+@import "tailwindcss" source(none);
+@source "../../index.html";
+@source "../js/script.js";
+
+/* Preserve the reference page's breakpoints, palette and system font. */
+@theme {
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1400px;
+    --color-primary: #0d6efd;
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer base {
+    :root {
+        --body-bg: #fff;
+        --body-color: #212529;
+        --emphasis: #000;
+        --secondary-color: rgba(33, 37, 41, .75);
+        --secondary-bg: #e9ecef;
+        --tertiary-bg: #f8f9fa;
+        --border-color: #dee2e6;
+        --card-border: rgba(0, 0, 0, .175);
+        --nav-color: rgba(0, 0, 0, .65);
+        --nav-hover: rgba(0, 0, 0, .8);
+        --nav-border: rgba(0, 0, 0, .15);
+        --link-color: #0d6efd;
+        --link-hover: #0a58ca;
+        --gutter-x: 1.5rem;
+        --gutter-y: 0px;
+        scroll-behavior: smooth;
+    }
+    :root[data-theme="dark"] {
+        color-scheme: dark;
+        --body-bg: #212529;
+        --body-color: #dee2e6;
+        --emphasis: #fff;
+        --secondary-color: rgba(222, 226, 230, .75);
+        --secondary-bg: #343a40;
+        --tertiary-bg: #2b3035;
+        --border-color: #495057;
+        --card-border: rgba(255, 255, 255, .15);
+        --nav-color: rgba(255, 255, 255, .65);
+        --nav-hover: rgba(255, 255, 255, .8);
+        --nav-border: rgba(255, 255, 255, .15);
+        --link-color: #6ea8fe;
+        --link-hover: #8bb9fe;
+    }
+    body { font-family: var(--font-sans); font-size: 1rem; font-weight: 400; line-height: 1.5; color: var(--body-color); text-align: start; }
+    h1, h2, h3 { margin-top: 0; margin-bottom: .5rem; font-weight: 500; line-height: 1.2; }
+    p, ul { margin-top: 0; margin-bottom: 1rem; }
+    ul { padding-left: 2rem; list-style-type: disc; }
+    a { color: var(--link-color); text-decoration: underline; }
+    a:hover { color: var(--link-hover); }
+    strong { font-weight: 700; }
+    small { font-size: .875em; }
+    img, svg { display: inline; vertical-align: middle; }
+    hr { margin: 1rem 0; border: 0; border-top: 1px solid; color: inherit; opacity: .25; }
+    button { font-family: inherit; }
+    section { scroll-margin-top: 90px; }
+    @media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } }
+}
+
+/* The navigation icon is the only custom visual asset besides the portrait. */
+@layer components {
+    .menu-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+    [data-theme="dark"] .menu-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+}

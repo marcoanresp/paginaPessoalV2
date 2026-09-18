@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Pessoal</title>
+
+
+    <!-- Font Awesome (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS compilado pelo Tailwind (assets/css/input.css) -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-[var(--body-bg)]">
+    <!-- Conteúdo virá aqui -->
+    <!-- Navbar -->
+    <nav class="relative flex flex-wrap items-center justify-between py-2 [&>div]:flex [&>div]:flex-wrap [&>div]:items-center [&>div]:justify-between lg:flex-nowrap lg:justify-start lg:[&>div]:flex-nowrap border-b border-[var(--border-color)] bg-[var(--body-bg)] !sticky top-0 z-[1020]">
+        <div class="w-full mx-auto px-3 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px]">
+            <a class="py-[.3125rem] mr-4 text-xl leading-[inherit] whitespace-nowrap no-underline text-[var(--emphasis)] font-semibold" href="#top">
+                <i class="fa-solid fa-code mr-2"></i>Meu Portfólio
+            </a>
+            <button class="px-3 py-1 cursor-pointer text-xl text-[var(--nav-color)] leading-none bg-transparent border border-[var(--nav-border)] rounded-md lg:hidden focus:shadow-[0_0_0_.25rem_var(--nav-color)] focus:outline-none" type="button" id="menuToggle" aria-controls="navContent" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="menu-icon inline-block w-[1.5em] h-[1.5em] align-middle bg-center bg-no-repeat bg-[length:100%]"></span>
+            </button>
+            <div class="hidden basis-full grow items-center lg:!flex lg:basis-auto" id="navContent">
+                <ul class="flex flex-col pl-0 mb-0 list-none lg:flex-row ml-auto lg:gap-1">
+                    <li class=""><a class="block py-2 lg:px-2 text-[var(--nav-color)] hover:text-[var(--nav-hover)] focus:text-[var(--nav-hover)] no-underline transition-colors motion-reduce:transition-none" href="#sobre">Sobre</a></li>
+                    <li class=""><a class="block py-2 lg:px-2 text-[var(--nav-color)] hover:text-[var(--nav-hover)] focus:text-[var(--nav-hover)] no-underline transition-colors motion-reduce:transition-none" href="#habilidades">Habilidades</a></li>
+                    <li class=""><a class="block py-2 lg:px-2 text-[var(--nav-color)] hover:text-[var(--nav-hover)] focus:text-[var(--nav-hover)] no-underline transition-colors motion-reduce:transition-none" href="#projetos">Projetos</a></li>
+                    <li class=""><a class="block py-2 lg:px-2 text-[var(--nav-color)] hover:text-[var(--nav-hover)] focus:text-[var(--nav-hover)] no-underline transition-colors motion-reduce:transition-none" href="#interesses">Interesses</a></li>
+                    <li class=""><a class="block py-2 lg:px-2 text-[var(--nav-color)] hover:text-[var(--nav-hover)] focus:text-[var(--nav-hover)] no-underline transition-colors motion-reduce:transition-none" href="#contato">Contato</a></li>
+                </ul>
+                <div class="lg:ml-4 flex items-center gap-2 py-2 lg:py-0">
+                    <span class="text-[.875em] text-[#6c757d] hidden lg:inline">Tema</span>
+                    <button id="themeToggle" aria-label="Alternar tema" class="inline-block font-normal leading-normal text-center align-middle cursor-pointer select-none border rounded-md no-underline transition-[color,background-color,border-color,box-shadow] duration-150 motion-reduce:transition-none focus-visible:outline-none focus-visible:shadow-[0_0_0_.25rem_var(--button-ring)] text-[#6c757d] bg-transparent border-[#6c757d] hover:text-white hover:bg-[#6c757d] active:bg-[#6c757d] active:text-white [--button-ring:rgba(108,117,125,.5)] px-2 py-1 text-sm leading-normal !rounded-[.25rem]" type="button">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Informações Básicas -->
+    <header id="top" class="py-12">
+        <div class="w-full mx-auto px-3 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px]">
+            <div class="flex flex-wrap -mx-[calc(var(--gutter-x)/2)] -mt-[var(--gutter-y)] [&>*]:w-full [&>*]:max-w-full [&>*]:shrink-0 [&>*]:px-[calc(var(--gutter-x)/2)] [&>*]:mt-[var(--gutter-y)] items-center [--gutter-x:1.5rem] [--gutter-y:1.5rem]">
+                <div class="w-full lg:!w-[33.33333333%] text-center">
+                    <img class="w-40 h-40 rounded-[999px] border-4 border-[rgba(255,255,255,.7)] shadow-[0_.125rem_.25rem_rgba(0,0,0,.075)]" src="assets/img/foto.svg" alt="Foto de perfil">
+                    <div class="mt-4">
+                        <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md text-white bg-primary mr-1">Sistemas de Informação</span>
+                        <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md text-white bg-[#6c757d]">UFLA</span>
+                    </div>
+                </div>
+                <div class="w-full lg:!w-[66.66666667%]">
+                    <h1 class="text-[calc(1.375rem+1.5vw)] xl:text-[2.5rem] font-semibold mb-4">
+                        Olá! Eu sou <span class="text-primary">Marco Antonio</span>
+                    </h1>
+                    <p class="text-xl leading-normal font-light text-[#6c757d] mb-6">
+                        Estudante do curso de Sistemas de Informação, interessado em IA, machine learning, C++ e estudante Web Dev.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <a class="inline-block font-normal leading-normal text-center align-middle cursor-pointer select-none border rounded-md no-underline transition-[color,background-color,border-color,box-shadow] duration-150 motion-reduce:transition-none focus-visible:outline-none focus-visible:shadow-[0_0_0_.25rem_var(--button-ring)] text-white bg-primary border-primary hover:bg-[#0b5ed7] hover:border-[#0a58ca] active:bg-[#0a58ca] active:border-[#0a53be] [--button-ring:rgba(49,132,253,.5)] px-3 py-1.5 text-base" href="#projetos">
+                            <i class="fa-solid fa-diagram-project mr-2"></i>Ver projetos
+                        </a>
+                        <a class="inline-block font-normal leading-normal text-center align-middle cursor-pointer select-none border rounded-md no-underline transition-[color,background-color,border-color,box-shadow] duration-150 motion-reduce:transition-none focus-visible:outline-none focus-visible:shadow-[0_0_0_.25rem_var(--button-ring)] text-primary bg-transparent border-primary hover:text-white hover:bg-primary active:bg-primary active:text-white [--button-ring:rgba(13,110,253,.5)] px-3 py-1.5 text-base" href="#contato">
+                            <i class="fa-solid fa-envelope mr-2"></i>Contato
+                        </a>
+                        <a class="inline-block font-normal leading-normal text-center align-middle cursor-pointer select-none border rounded-md no-underline transition-[color,background-color,border-color,box-shadow] duration-150 motion-reduce:transition-none focus-visible:outline-none focus-visible:shadow-[0_0_0_.25rem_var(--button-ring)] text-[#6c757d] bg-transparent border-[#6c757d] hover:text-white hover:bg-[#6c757d] active:bg-[#6c757d] active:text-white [--button-ring:rgba(108,117,125,.5)] px-3 py-1.5 text-base" href="https://github.com/marcoanresp" target="_blank">
+                            <i class="fa-brands fa-github mr-2"></i>GitHub
+                        </a>
+                        <a class="inline-block font-normal leading-normal text-center align-middle cursor-pointer select-none border rounded-md no-underline transition-[color,background-color,border-color,box-shadow] duration-150 motion-reduce:transition-none focus-visible:outline-none focus-visible:shadow-[0_0_0_.25rem_var(--button-ring)] text-[#6c757d] bg-transparent border-[#6c757d] hover:text-white hover:bg-[#6c757d] active:bg-[#6c757d] active:text-white [--button-ring:rgba(108,117,125,.5)] px-3 py-1.5 text-base" href="https://www.linkedin.com/in/marco-antonio-roquini-espudario/" target="_blank">
+                            <i class="fa-brands fa-linkedin mr-2"></i>LinkedIn
+                        </a>
+                    </div>
+                    <hr class="my-6">
+                    <div class="flex flex-wrap -mx-[calc(var(--gutter-x)/2)] -mt-[var(--gutter-y)] [&>*]:w-full [&>*]:max-w-full [&>*]:shrink-0 [&>*]:px-[calc(var(--gutter-x)/2)] [&>*]:mt-[var(--gutter-y)] [--gutter-x:1rem] [--gutter-y:1rem]">
+                        <div class="w-full md:!w-1/2">
+                            <div class="p-4 rounded-lg border border-[var(--border-color)] bg-[var(--tertiary-bg)]">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-graduation-cap text-primary"></i>
+                                    <strong>Curso</strong>
+                                </div>
+                                <p class="mb-0 text-[#6c757d]">
+                                    Bacharelado em Sistemas de Informação - Universidade Federal de Lavras (UFLA).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full md:!w-1/2">
+                            <div class="p-4 rounded-lg border border-[var(--border-color)] bg-[var(--tertiary-bg)]">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-bullseye text-primary"></i>
+                                    <strong>Objetivo</strong>
+                                </div>
+                                <p class="mb-0 text-[#6c757d]">
+                                    Aprimorar habilidades em web (frontend e backend), estudar sobre IA, c++ e python.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pb-12">
+        <!-- Sobre -->
+        <section id="sobre" class="py-6">
+            <div class="w-full mx-auto px-3 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px]">
+                <div class="mb-4">
+                    <h2 class="text-[calc(1.275rem+.3vw)] xl:text-2xl leading-[1.2] mb-1">Sobre</h2>
+                    <p class="text-[#6c757d] mb-0">Uma breve descrição do estudante e trajetória.</p>
+                </div>
+                <div class="flex flex-wrap -mx-[calc(var(--gutter-x)/2)] -mt-[var(--gutter-y)] [&>*]:w-full [&>*]:max-w-full [&>*]:shrink-0 [&>*]:px-[calc(var(--gutter-x)/2)] [&>*]:mt-[var(--gutter-y)] [--gutter-x:1.5rem] [--gutter-y:1.5rem]">
+                    <div class="w-full lg:!w-[58.33333333%]">
+                        <div class="relative flex flex-col min-w-0 break-words bg-[var(--body-bg)] bg-clip-border border border-[var(--card-border)] rounded-md shadow-[0_.125rem_.25rem_rgba(0,0,0,.075)]">
+                            <div class="flex-auto p-4">
+                                <p class="mb-2">
+                                    Sou estudante de Sistemas de Informação e estou construindo projetos para incrementar meu portfólio. Vou adicioná-los aqui.
+                                </p>
+                                <p class="mb-0 text-[#6c757d]">
+                                    Nesta página, apresento minhas habilidades, interesses e projetos desenvolvidos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:!w-[41.66666667%]">
+                        <div class="relative flex flex-col min-w-0 break-words bg-[var(--body-bg)] bg-clip-border border border-[var(--card-border)] rounded-md shadow-[0_.125rem_.25rem_rgba(0,0,0,.075)]">
+                            <div class="flex-auto p-4">
+                                <h3 class="text-base leading-[1.2] mb-4">Informações rápidas</h3>
+                                <ul class="pl-0 list-none mb-0">
+                                    <li class="flex gap-2 mb-2">
+                                        <i class="fa-solid fa-location-dot text-primary mt-1"></i>
+                                        <div><strong>Cidade:</strong> Lavras/MG</div>
+                                    </li>
+                                    <li class="flex gap-2 items-start mb-2">
+                                        <i class="fa-solid fa-language mt-1 text-primary"></i>
+                                        <div><strong>Idiomas:</strong> Português, Inglês (avançado)</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades" class="py-6">
+            <div class="w-full mx-auto px-3 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px]">
+                <div class="">
+                    <h2 class="text-[calc(1.275rem+.3vw)] xl:text-2xl leading-[1.2] mb-1">Habilidades</h2>
+                    <p class="text-[#6c757d] mb-0">Tecnologias e competências.</p>
+                </div>
+                <div class="flex flex-wrap -mx-[calc(var(--gutter-x)/2)] -mt-[var(--gutter-y)] [&>*]:w-full [&>*]:max-w-full [&>*]:shrink-0 [&>*]:px-[calc(var(--gutter-x)/2)] [&>*]:mt-[var(--gutter-y)] [--gutter-x:1.5rem] [--gutter-y:1.5rem] mt-1">
+                    <div class="w-full lg:!w-1/2">
+                        <div class="relative flex flex-col min-w-0 break-words bg-[var(--body-bg)] bg-clip-border border border-[var(--card-border)] rounded-md shadow-[0_.125rem_.25rem_rgba(0,0,0,.075)] h-full">
+                            <div class="flex-auto p-4">
+                                <h3 class="text-base leading-[1.2]">Tecnologias</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md !rounded-full text-white bg-primary">HTML</span>
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md !rounded-full text-white bg-primary">CSS</span>
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md !rounded-full text-white bg-primary">JavaScript</span>
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md !rounded-full text-white bg-primary">Python</span>
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md !rounded-full text-white bg-primary">C++</span>
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md !rounded-full text-white bg-[#6c757d]">Bootstrap</span>
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md !rounded-full text-white bg-[#6c757d]">Git/GitHub</span>
+                                </div>
+                                <hr>
+                                <h3 class="text-base leading-[1.2]">Competências</h3>
+                                <ul class="mb-0">
+                                    <li>Uso de Git e Github para versionamento</li>
+                                    <li>Criação de págians web básicas</li>
+                                    <li>Uso de micrserviços</li>
+                                    <li>MCP; RAG</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:!w-1/2">
+                        <div class="relative flex flex-col min-w-0 break-words bg-[var(--body-bg)] bg-clip-border border border-[var(--card-border)] rounded-md shadow-[0_.125rem_.25rem_rgba(0,0,0,.075)] h-full">
+                            <div class="flex-auto p-4">
+                                <h3 class="text-base leading-[1.2]">Nível de familiaridade </h3>
+                                <div class="mb-4">
+                                    <div class="flex justify-between">
+                                        <span>HTML</span><span class="text-[#6c757d] text-[.875em]">Intermediário</span>
+                                    </div>
+                                    <div class="flex h-4 overflow-hidden text-xs leading-normal bg-[var(--secondary-bg)] rounded-md" role="progressbar" aria-label="HTML" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="flex flex-col justify-center overflow-hidden text-white text-center whitespace-nowrap bg-primary transition-[width] duration-[600ms] motion-reduce:transition-none" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="flex justify-between">
+                                        <span>CSS</span><span class="text-[#6c757d] text-[.875em]">Básico-Intermediário</span>
+                                    </div>
+                                    <div class="flex h-4 overflow-hidden text-xs leading-normal bg-[var(--secondary-bg)] rounded-md" role="progressbar" aria-label="CSS" aria-valuenow="55"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="flex flex-col justify-center overflow-hidden text-white text-center whitespace-nowrap bg-primary transition-[width] duration-[600ms] motion-reduce:transition-none" style="width: 55%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="flex justify-between">
+                                        <span>Javascript</span><span class="text-[#6c757d] text-[.875em]">Básico-Intermediário</span>
+                                    </div>
+                                    <div class="flex h-4 overflow-hidden text-xs leading-normal bg-[var(--secondary-bg)] rounded-md" role="progressbar" aria-label="CSS" aria-valuenow="55"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="flex flex-col justify-center overflow-hidden text-white text-center whitespace-nowrap bg-primary transition-[width] duration-[600ms] motion-reduce:transition-none" style="width: 55%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="flex justify-between">
+                                        <span>Python</span><span class="text-[#6c757d] text-[.875em]">Intermediário</span>
+                                    </div>
+                                    <div class="flex h-4 overflow-hidden text-xs leading-normal bg-[var(--secondary-bg)] rounded-md" role="progressbar" aria-label="JavaScript" aria-valuenow="65"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="flex flex-col justify-center overflow-hidden text-white text-center whitespace-nowrap bg-primary transition-[width] duration-[600ms] motion-reduce:transition-none" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-0">
+                                    <div class="flex justify-between">
+                                        <span>C++</span><span class="text-[#6c757d] text-[.875em]">Intermediário</span>
+                                    </div>
+                                    <div class="flex h-4 overflow-hidden text-xs leading-normal bg-[var(--secondary-bg)] rounded-md" role="progressbar" aria-label="JavaScript" aria-valuenow="65"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="flex flex-col justify-center overflow-hidden text-white text-center whitespace-nowrap bg-primary transition-[width] duration-[600ms] motion-reduce:transition-none" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="py-6">
+            <div class="w-full mx-auto px-3 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px]">
+                <div class="">
+                    <h2 class="text-[calc(1.275rem+.3vw)] xl:text-2xl leading-[1.2] mb-1">Projetos</h2>
+                    <p class="text-[#6c757d] mb-0">Alguns trabalhos já desenvolvidos.</p>
+                </div>
+                <div class="flex flex-wrap -mx-[calc(var(--gutter-x)/2)] -mt-[var(--gutter-y)] [&>*]:w-full [&>*]:max-w-full [&>*]:shrink-0 [&>*]:px-[calc(var(--gutter-x)/2)] [&>*]:mt-[var(--gutter-y)] [--gutter-x:1.5rem] [--gutter-y:1.5rem] mt-1">
+                    <div class="w-full md:!w-1/2 lg:!w-[33.33333333%]">
+                        <div class="relative flex flex-col min-w-0 break-words bg-[var(--body-bg)] bg-clip-border border border-[var(--card-border)] rounded-md shadow-[0_.125rem_.25rem_rgba(0,0,0,.075)] h-full">
+                            <div class="flex-auto p-4 flex flex-col">
+                                <div class="flex items-start justify-between gap-2">
+                                    <h3 class="text-base leading-[1.2] mb-1">Jogo Space Invaders</h3>
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md text-white bg-[#6c757d]">HTML</span>
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md text-white bg-[#6c757d]">CSS</span>
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md text-white bg-[#6c757d]">JavaScript</span>
+                                </div>
+                                <p class="text-[#6c757d] text-[.875em]">
+                                    Jogo WEB, com técnicas de OOP para javascript.
+                                </p>
+                                <ul class="text-[.875em] mb-6">
+                                    <li>Programação orientada a objetos</li>
+                                    <li>Controle de personagem</li>
+                                    <li>Rounds de inimigos</li>
+                                </ul>
+                                <div class="mt-auto flex gap-2">
+                                    <a class="inline-block font-normal leading-normal text-center align-middle cursor-pointer select-none border rounded-md no-underline transition-[color,background-color,border-color,box-shadow] duration-150 motion-reduce:transition-none focus-visible:outline-none focus-visible:shadow-[0_0_0_.25rem_var(--button-ring)] text-primary bg-transparent border-primary hover:text-white hover:bg-primary active:bg-primary active:text-white [--button-ring:rgba(13,110,253,.5)] px-2 py-1 text-sm leading-normal !rounded-[.25rem]" href="https://github.com/marcoanresp/jogo-prog-web" target="_blank" rel="noreferrer">
+                                        <i class="fa-brands fa-github mr-1"></i>Repositório
+                                    </a>
+                                    <a class="inline-block font-normal leading-normal text-center align-middle cursor-pointer select-none border rounded-md no-underline transition-[color,background-color,border-color,box-shadow] duration-150 motion-reduce:transition-none focus-visible:outline-none focus-visible:shadow-[0_0_0_.25rem_var(--button-ring)] text-white bg-primary border-primary hover:bg-[#0b5ed7] hover:border-[#0a58ca] active:bg-[#0a58ca] active:border-[#0a53be] [--button-ring:rgba(49,132,253,.5)] px-2 py-1 text-sm leading-normal !rounded-[.25rem]" href="https://marcoanresp.github.io/jogo-prog-web/" target="_blank" rel="noreferrer">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:!w-1/2 lg:!w-[41.66666667%]">
+                        <div class="relative flex flex-col min-w-0 break-words bg-[var(--body-bg)] bg-clip-border border border-[var(--card-border)] rounded-md shadow-[0_.125rem_.25rem_rgba(0,0,0,.075)] h-full">
+                            <div class="flex-auto p-4 flex flex-col">
+                                <div class="flex items-start justify-between gap-2">
+                                    <h3 class="text-base leading-[1.2] mb-1">Página Pessoal</h3>
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md text-white bg-[#6c757d]">HTML</span>
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md text-white bg-[#6c757d]">Bootstrap</span>
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md text-white bg-[#6c757d]">FontAwesome</span>
+                                </div>
+                                <p class="text-[#6c757d] text-[.875em]">
+                                    Implementação de página pessoal com seções e navegação.
+                                </p>
+                                <ul class="text-[.875em] mb-6">
+                                    <li>Classes do Bootstrap</li>
+                                    <li>Grid do Bootstrap</li>
+                                    <li>Componentes (cards, navbar)</li>
+                                </ul>
+                                <div class="mt-auto flex gap-2">
+                                    <a class="inline-block font-normal leading-normal text-center align-middle cursor-pointer select-none border rounded-md no-underline transition-[color,background-color,border-color,box-shadow] duration-150 motion-reduce:transition-none focus-visible:outline-none focus-visible:shadow-[0_0_0_.25rem_var(--button-ring)] text-primary bg-transparent border-primary hover:text-white hover:bg-primary active:bg-primary active:text-white [--button-ring:rgba(13,110,253,.5)] px-2 py-1 text-sm leading-normal !rounded-[.25rem]" href="https://github.com/marcoanresp/paginaPessoal" target="_blank" rel="noreferrer">
+                                        <i class="fa-brands fa-github mr-1"></i>Repositório
+                                    </a>
+                                    <a class="inline-block font-normal leading-normal text-center align-middle cursor-pointer select-none border rounded-md no-underline transition-[color,background-color,border-color,box-shadow] duration-150 motion-reduce:transition-none focus-visible:outline-none focus-visible:shadow-[0_0_0_.25rem_var(--button-ring)] text-white bg-primary border-primary hover:bg-[#0b5ed7] hover:border-[#0a58ca] active:bg-[#0a58ca] active:border-[#0a53be] [--button-ring:rgba(49,132,253,.5)] px-2 py-1 text-sm leading-normal !rounded-[.25rem]" href="https://marcoanresp.github.io/paginaPessoal/" target="_blank" rel="noreferrer">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Interesses -->
+        <section id="interesses" class="py-6">
+            <div class="w-full mx-auto px-3 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px]">
+                <div class="">
+                    <h2 class="text-[calc(1.275rem+.3vw)] xl:text-2xl leading-[1.2] mb-1">Interesses</h2>
+                    <p class="text-[#6c757d] mb-0">Áreas que eu gosto de estudar/pesquisar.</p>
+                </div>
+                <div class="flex flex-wrap -mx-[calc(var(--gutter-x)/2)] -mt-[var(--gutter-y)] [&>*]:w-full [&>*]:max-w-full [&>*]:shrink-0 [&>*]:px-[calc(var(--gutter-x)/2)] [&>*]:mt-[var(--gutter-y)] [--gutter-x:1.5rem] [--gutter-y:1.5rem] mt-1">
+                    <div class="w-full lg:!w-1/2">
+                        <div class="relative flex flex-col min-w-0 break-words bg-[var(--body-bg)] bg-clip-border border border-[var(--card-border)] rounded-md shadow-[0_.125rem_.25rem_rgba(0,0,0,.075)] h-full">
+                            <div class="flex-auto p-4">
+                                <ul class="mb-0">
+                                    <li>Desenvolvimento Web (frontend e backend)</li>
+                                    <li>Machine Learning</li>
+                                    <li>Algoritmos e estruturas de dados</li>
+                                    <li>Linguagem C++</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:!w-1/2">
+                        <div class="relative flex flex-col min-w-0 break-words bg-[var(--body-bg)] bg-clip-border border border-[var(--card-border)] rounded-md shadow-[0_.125rem_.25rem_rgba(0,0,0,.075)] h-full">
+                            <div class="flex-auto p-4">
+                                <h3 class="text-base leading-[1.2]">Atividades</h3>
+                                <p class="text-[#6c757d] mb-2">
+                                    Participo de projetos acadêmicos e gosto de aprender criando coisas.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md text-black bg-[#f8f9fa] border border-[var(--border-color)]"><i
+                                            class="fa-solid fa-book mr-1"></i>Estudos</span>
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md text-black bg-[#f8f9fa] border border-[var(--border-color)]"><i
+                                            class="fa-solid fa-people-group mr-1"></i>Trabalho em equipe</span>
+                                    <span class="inline-block px-[.65em] py-[.35em] text-[.75em] font-bold leading-none text-center whitespace-nowrap align-baseline rounded-md text-black bg-[#f8f9fa] border border-[var(--border-color)]"><i
+                                            class="fa-solid fa-terminal mr-1"></i>Projetos práticos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="py-6">
+            <div class="w-full mx-auto px-3 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px]">
+                <div class="">
+                    <h2 class="text-[calc(1.275rem+.3vw)] xl:text-2xl leading-[1.2] mb-1">Contato</h2>
+                    <p class="text-[#6c757d] mb-0">Como falar comigo.</p>
+                </div>
+                <div class="flex flex-wrap -mx-[calc(var(--gutter-x)/2)] -mt-[var(--gutter-y)] [&>*]:w-full [&>*]:max-w-full [&>*]:shrink-0 [&>*]:px-[calc(var(--gutter-x)/2)] [&>*]:mt-[var(--gutter-y)] [--gutter-x:1.5rem] [--gutter-y:1.5rem] mt-1">
+                    <div class="w-full lg:!w-1/2">
+                        <div class="relative flex flex-col min-w-0 break-words bg-[var(--body-bg)] bg-clip-border border border-[var(--card-border)] rounded-md shadow-[0_.125rem_.25rem_rgba(0,0,0,.075)]">
+                            <div class="flex-auto p-4">
+                                <ul class="pl-0 list-none mb-0">
+                                    <li class="flex gap-2 items-center mb-2">
+                                        <i class="fa-solid fa-envelope text-primary"></i>
+                                        <span>marcoanroques@gmail.com</span>
+                                    </li>
+                                    <li class="flex gap-2 items-center mb-2">
+                                        <i class="fa-brands fa-github text-primary"></i>
+                                        <a class="no-underline" href="https://github.com/"
+                                            target="_blank" rel="noreferrer">
+                                            https://github.com/marcoanresp
+                                        </a>
+                                    </li>
+                                    <li class="flex gap-2 items-center">
+                                        <i class="fa-brands fa-linkedin text-primary"></i>
+                                        <a class="no-underline"
+                                            href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                                            https://www.linkedin.com/in/marco-antonio-roquini-espudario/
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé da Página -->
+    <footer class="border-t border-[var(--border-color)] py-6">
+        <div class="w-full mx-auto px-3 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px] flex flex-col md:flex-row justify-between gap-2">
+            <small class="text-[#6c757d]">© <span id="year"></span> Página Pessoal — Marco Antonio Roquini Espudario</small>
+            <small class="text-[#6c757d]">Feito com HTML + Tailwind + um pouco de CSS/JS</small>
+        </div>
+    </footer>
+
+    <!-- JS do projeto -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
